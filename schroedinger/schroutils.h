@@ -2,7 +2,7 @@
 #ifndef __SCHRO_UTILS_H__
 #define __SCHRO_UTILS_H__
 
-#if defined(_MSC_VER)
+#if defined(_MSC_VER) && _MSC_VER < 1900
 #ifndef SCHRO_NO_STDINT_TYPEDEFS
 typedef __int8 int8_t;
 typedef __int16 int16_t;
@@ -116,7 +116,7 @@ typedef int SchroCUDAStream;
 #define M_LN10 2.30258509299404568402
 #endif
 
-#if defined(_MSC_VER)
+#if defined(_MSC_VER) && _MSC_VER < 1900
 #define rint(x) (floor((x) + 0.5))
 #endif
 
